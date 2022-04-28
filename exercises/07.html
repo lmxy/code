@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+    <script>
+      let words = ['hello', 'bb', 'world'];
+
+      function toUpper(words) {
+        const capitals = [];
+        words.forEach (function(wd) {
+          let w = wd.toUpperCase();
+          capitals.push(w);
+        });
+        console.log(capitals);
+      };
+
+      toUpper(['is']);
+      
+      function arrayDouble(words) {
+        const new_list = [];
+        words.forEach(function(wd) {
+          new_list.push(wd)
+          new_list.push(wd)
+        });
+        console.log(new_list);
+      };
+      arrayDouble(['77']);
+
+      function arraySum(nums) {
+        let total = 0;
+        nums.forEach(function(i) {
+          total += i;
+        });
+        console.log(total);
+      };
+      nums = [1, 100, 65];
+      arraySum(nums);
+      arraySum([3, 4]);
+      arraySum([5]);
+    </script>
+  </body>
+</html>
