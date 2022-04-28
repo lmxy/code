@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .box {
+        background-color: rgba(204, 204, 204, 0.507);
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 400px;
+        height: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="cart" class="box"></div>
+    <button id="apple" onclick="addApple()">Apple</button>
+    <button id="tomato" onclick="addTomato()">Tomato</button>
+    <button id="eggs" onclick="addEggs()">Eggs </button>
+    <button id="clear" onclick="clearAll()">Clear</button>
+
+    <script>
+
+      function addApple() {
+        let element = document.createElement('div');
+        let text = document.getElementById('apple');
+        element.innerText = text.innerText;
+        document.getElementById('cart').appendChild(element);
+      };
+
+      function addTomato() {
+        let element = document.createElement('div');
+        let text = document.getElementById('tomato');
+        element.innerText = text.innerText;
+        document.getElementById('cart').appendChild(element);
+      };
+
+      function addEggs() {
+        let element = document.createElement('div');
+        let text = document.getElementById('eggs');
+        element.innerText = text.innerText;
+        document.getElementById('cart').appendChild(element);
+      };
+
+      function clearAll() {
+        document.getElementById('cart').innerHTML = '';
+      };
+    </script>
+  </body>
+</html>

@@ -10,7 +10,8 @@
 
     <input id="input-text" type="text">
     <button id="input-button" onclick="inPut()">INPUT</button>
-    <div id="text-box">this is a textbox</div>
+    <!-- <div id="text-box">this is a textbox</div>
+    <div id="box1">0</div> -->
 
     <script>
 
@@ -33,11 +34,20 @@
       };
 
       function inPut() {
-        let text = document.getElementById('input-text');
-        let textbox = document.getElementById('text-box');
-        textbox.insertAdjacentElement('beforeend', text.value);
-        
+        let input = document.getElementById('input-text');
+        let element = document.createElement('div');
+        element.innerText = input.value;
+        document.body.appendChild(element);
       };
+
+      // function inPut() {
+      //   let text = document.getElementById('input-text');
+      //   let textbox = document.getElementById('text-box');
+      //   textbox.insertAdjacentText('beforeend', text.value);
+      //   let box1 = document.getElementById('box1');
+      //   let div_text = '<div>' + text.value + '</div>'
+      //   box1.insertAdjacentHTML('beforeend', div_text)
+      // };
 
     </script>
   </body>

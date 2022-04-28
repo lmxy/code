@@ -6,24 +6,34 @@
   </head>
 
   <body>
-    <div>My name is David</div>
     <input id="todo-title" type="text" />
-    <button onclick="addTodo()" >Press me</button>
-    <script>
-      let todos = ['Get groceries', 'Wash car', 'Make dinner'];
-        // todos.push('another todo');
+    <button onclick="addTodo()" >Add Todo</button>
 
-      todos.forEach (function (todoTitle) {
-        let element = document.createElement('div');
-        element.innerText = todoTitle;
-        document.body.appendChild(element);
-      });
+    <div id="todo-list"></div>
+    <script>
+      const todos = ['Get groceries', 'Wash car', 'Make dinner'];
+        // todos.push('another todo');
+      render();
 
       function addTodo() {
-        let textbox = document.getElementById('todo-title');
-        let tittle = textbox.value;
-        todos.push('new todo');
+        
+        const textbox = document.getElementById('todo-title');
+        const tittle = textbox.value;
+        todos.push(tittle);
+        render();
       };
+
+      function render() {
+        // reset our list
+        document.getElementById('todo-list').innerHTML = '';
+        todos.forEach (function (todoTitle) {
+          const element = document.createElement('div');
+          element.innerText = todoTitle;
+          const todoList = document.getElementById('todo-list');
+          todoList.appendChild(element);
+        })
+        
+      }
     </script>
   </body>
 
