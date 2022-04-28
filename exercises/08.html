@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+    <button id="todo-button" onclick="changeInner()">before click</button>
+    <div id="counter">0</div>
+    <button id="up-button" onclick="upOne()">Up</button>
+    <button id="down-button" onclick="downOne()">Down</button>
+
+    <input id="input-text" type="text">
+    <button id="input-button" onclick="inPut()">INPUT</button>
+    <div id="text-box">this is a textbox</div>
+
+    <script>
+
+      function changeInner() {
+        let text = document.getElementById('todo-button');
+        text.innerText = "Done";
+      };
+      let count = 0;
+
+      function upOne() {
+        count += 1;
+        let text = document.getElementById('counter');
+        text.textContent = count;
+      };
+
+      function downOne() {
+        count -= 1;
+        let text = document.getElementById('counter');
+        text.textContent = count;
+      };
+
+      function inPut() {
+        let text = document.getElementById('input-text');
+        let textbox = document.getElementById('text-box');
+        textbox.insertAdjacentElement('beforeend', text.value);
+        
+      };
+
+    </script>
+  </body>
+</html>
