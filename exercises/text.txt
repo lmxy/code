@@ -6,4 +6,13 @@
 　人口の指数関数的な増加、巨大化する都市環境、大量生産と大量消費に支えられたGDPの成長神話、国
 の制約を凌駕しようとするグローバリゼーション
 
-140.82.112.3
+Model
+Contains all the code that saves and manages data.
+
+View
+Contains all the code that manages visuals.Renders visuals using data in the model.
+
+Controller
+Connects model and view togother:
+1) Responds to events from the view (e.g. button clicks)
+2) Tell the model to updates its data (and the view to re-render)
