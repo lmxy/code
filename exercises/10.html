@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const cartArray = [
+        {
+          name: 'Apple',
+          price: 4,
+          quantity: 2
+        }, {
+          name: 'Orange',
+          price: 3,
+          quantity: 3
+        }];
+      
+      let sum = 0;
+      cartArray.forEach(function(item) {
+        const total = item.price * item.quantity;
+        sum += total;
+      });
+    </script>
+  </body>
+</html>

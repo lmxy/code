@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="receipt"></div>
+
+    <script>
+
+      const cartArray = [
+        {
+          name: 'Apple',
+          price: 4,
+          quantity: 2
+        }, {
+          name: 'Orange',
+          price: 3,
+          quantity: 3
+        }, {
+          name: 'banna',
+          price: 1,
+          quantity: 10
+        }, {
+          name: 'pear',
+          price: 2,
+          quantity: 4        
+        }];
+      
+      const display = document.getElementById('receipt');
+      displayReceipt();
+
+      function displayReceipt() {
+        display.innerHTML = '';
+        let sum = 0;
+        cartArray.forEach(function(item){
+          const element = document.createElement('div');
+          element.innerText = item.name + ' ' + '$' + item.price + ' ' +  '*' + ' ' + item.quantity +' = ' + '$' + item.price * item.quantity;
+          display.appendChild(element);
+          const total = item.price * item.quantity;
+          sum += total;
+        });
+        const element = document.createElement('div');
+        element.innerText = 'Cart total = $' + sum;
+        display.appendChild(element);
+      };
+    </script>
+  </body>
+</html>
