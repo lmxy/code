@@ -5,6 +5,7 @@
     <div id="receipt"></div>
 
     <script>
+      const display = document.getElementById('receipt');
 
       const cartArray = [
         {
@@ -25,10 +26,9 @@
           quantity: 4        
         }];
       
-      const display = document.getElementById('receipt');
       displayReceipt();
 
-      function displayReceipt() {
+      function displayReceipt(cartArray) {
         display.innerHTML = '';
         let sum = 0;
         cartArray.forEach(function(item){
